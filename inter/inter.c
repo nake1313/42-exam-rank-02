@@ -2,12 +2,12 @@
 
 int	ft_check(char *s1, char *s2)
 {
-	while(s1 > s2)
+	while(s1 > s2 && *s2)
 	{
 		if (*s1 == *s2++)
 			return (0);
 	}
-	return (1);
+return (1);
 }
 
 int	ft_check2(char *s1, char *s2)
@@ -17,7 +17,7 @@ int	ft_check2(char *s1, char *s2)
 		if (*s1 == *s2++)
 			return (1);
 	}
-	return (0);
+return (0);
 }
 
 void	ft_inter(char *s1, char *s2)
@@ -36,9 +36,7 @@ void	ft_inter(char *s1, char *s2)
 int	main(int ac, char **av)
 {
 	if (ac == 3)
-	{
 		ft_inter(av[1], av[2]);
-	}
 	write(1, "\n", 1);
-	return (0);
+return (0);
 }
